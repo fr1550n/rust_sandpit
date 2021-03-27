@@ -1,0 +1,9 @@
+[package]
+name = "rust_sandpit"
+version = "0.1.0"
+authors = ["fr1550n <fr1550n@users.noreply.github.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
