@@ -44,9 +44,9 @@ impl From<std::io::Error> for TemperatureReadingError {
 
 // our custom Result type handles the errors: std::io::Error, std::num::ParseFloatError
 // by wrapping them in TemperatureReadingError
-pub fn read_temp() -> Result<f32>  {
+pub fn read_temp() -> Result<f32> {
     let cpu_path     = "/sys/class/thermal/thermal_zone0/temp";
     let mut contents = fs::read_to_string(cpu_path)?;
-    contents  = contents.trim_end().to_string();
+    contents         = contents.trim_end().to_string();
     return Ok(contents.parse::<f32>()? / 1000.)
 }
