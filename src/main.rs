@@ -1,3 +1,6 @@
+use cpu_temp::read_temp;
+mod cpu_temp;
+
 fn main() {
-    println!("Hello, world!");
+    println!("{:?}", read_temp().unwrap());
 }
